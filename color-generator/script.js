@@ -6,7 +6,7 @@ const hexcolorCopyElement = document.querySelector(".copyHexColorBtn")
 const colorInputs=document.querySelectorAll(".colorInput")
 
 const hexColorElement=document.querySelector(".hexColor")
-
+const copyRgbColorBtnElement=document.querySelector(".copyRgbColorBtn")
 function createRgbColor(){
     const red=parseInt(colorInputs[0].value)
     const green=parseInt(colorInputs[1].value)
@@ -44,3 +44,8 @@ colorInputs.forEach(input => {
   hexcolorCopyElement.addEventListener("click", () => {
     navigator.clipboard.writeText(hexColorElement.innerHTML)
   })
+
+  copyRgbColorBtnElement.addEventListener("click", () => {
+    navigator.clipboard.writeText(rgbValueElement.innerHTML)
+  })
+  
